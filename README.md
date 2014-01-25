@@ -24,7 +24,7 @@ Use `#to_b` on `String`, `Integer`, `Float`, `nil`, `true` or `false`.
 
 	'no'.to_b == false
 
-Check `Truther::TRUTHER_STRINGS` and `Truther::FALSY_STRINGS` to find out how strings are mapped to boolean.
+Check `Truther::TRUTHY_STRINGS` and `Truther::FALSY_STRINGS` to find out how strings are mapped to boolean.
 
 An unrecognized string will raise `Truther::NeitherTrueNorFalseError` unless a default value is provided. In which case the default value will be returned.
 

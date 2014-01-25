@@ -1,7 +1,7 @@
 require "truther/version"
 
 module Truther
-  TRUTHER_STRINGS = ['true', '1', 'yes', 'y', 'oui', 'vrai']
+  TRUTHY_STRINGS = ['true', '1', 'yes', 'y', 'oui', 'vrai']
   FALSY_STRINGS = ['false', '0', 'no', 'n', 'non', 'faux']
 
   class NeitherTrueNorFalseError < StandardError
@@ -14,7 +14,7 @@ end
 class String 
 	def to_b(when_not_recognized=:raise)
 		sanitized_string = self.downcase.strip
-		return true if Truther::TRUTHER_STRINGS.include? sanitized_string
+		return true if Truther::TRUTHY_STRINGS.include? sanitized_string
 		return false if Truther::FALSY_STRINGS.include? sanitized_string
 		
 		if when_not_recognized == :raise
