@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Truther::VERSION
   spec.authors       = ["Stephane Bisson"]
   spec.email         = ["stephane.c.bisson@gmail.com"]
-  spec.summary       = "Converts many strings to their boolean value."
-  spec.description   = "Converts true, t, yes, y, 1, oui, etc to boolean true."
-  spec.homepage      = ""
+  spec.summary       = "Converts many strings and values to true or false."
+  spec.description   = "Converts many strings and values to true or false."
+  spec.homepage      = "https://github.com/stephanebisson/truther"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
