@@ -1,6 +1,6 @@
 # Truthy
 
-TODO: Write a gem description
+Easy convertion to boolean from truthy and falsy values. 
 
 ## Installation
 

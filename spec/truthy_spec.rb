@@ -60,7 +60,16 @@ describe :to_b do
 			0.0.to_b.should be_false
 			-7.7.to_b.should be_false
 		end
+	end
 
+	context 'no-op on boolean' do
+		it 'converts to true' do
+			true.to_b.should be_true
+		end
+
+		it 'converts to false' do
+			false.to_b.should be_false
+		end
 	end
 
 end

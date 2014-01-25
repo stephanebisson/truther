@@ -42,3 +42,15 @@ class Float
 		self > 0.0
 	end
 end
+
+class TrueClass
+	def to_b
+		true
+	end
+end
+
+class FalseClass
+	def to_b
+		false
+	end
+end
