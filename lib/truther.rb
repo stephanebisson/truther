@@ -4,7 +4,7 @@ module Truther
   TRUTHER_STRINGS = ['true', '1', 'yes', 'y', 'oui', 'vrai']
   FALSY_STRINGS = ['false', '0', 'no', 'n', 'non', 'faux']
 
-  class NeitherTrueNoFalseError < StandardError
+  class NeitherTrueNorFalseError < StandardError
 	  def initialize(str)
 	    super("'#{str}' is not recognized as truther or falsy.")
 	  end
@@ -18,7 +18,7 @@ class String
 		return false if Truther::FALSY_STRINGS.include? sanitized_string
 		
 		if when_not_recognized == :raise
-			raise Truther::NeitherTrueNoFalseError.new sanitized_string
+			raise Truther::NeitherTrueNorFalseError.new sanitized_string
 		else
 			when_not_recognized
 		end

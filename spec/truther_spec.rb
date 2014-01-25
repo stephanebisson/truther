@@ -23,7 +23,7 @@ describe :to_b do
 		end
 
 		it 'raises error on unrecognized strings' do
-			expect {'asdf'.to_b}.to raise_error Truther::NeitherTrueNoFalseError
+			expect {'asdf'.to_b}.to raise_error Truther::NeitherTrueNorFalseError
 		end
 
 		it 'returns default on unrecognized strings' do

@@ -26,7 +26,7 @@ Use `#to_b` on `String`, `Integer`, `Float`, `nil`, `true` or `false`.
 
 Check `Truther::TRUTHER_STRINGS` and `Truther::FALSY_STRINGS` to find out how strings are mapped to boolean.
 
-An unrecognized string will raise `Truther::NeitherTrueNoFalseError` unless a default value is provided. In which case the default value will be returned.
+An unrecognized string will raise `Truther::NeitherTrueNorFalseError` unless a default value is provided. In which case the default value will be returned.
 
 	'maybe'.to_b(:i_dont_know) == :i_dont_know
 
