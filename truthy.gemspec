@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'truthy/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "truthy"
+  spec.name          = "truther"
   spec.version       = Truthy::VERSION
   spec.authors       = ["Stephane Bisson"]
   spec.email         = ["stephane.c.bisson@gmail.com"]

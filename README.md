@@ -1,4 +1,4 @@
-# Truthy
+# Truther
 
 Easy convertion to boolean from truthy and falsy values. 
 
