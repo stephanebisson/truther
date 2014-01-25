@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'truthy/version'
+require 'truther/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "truther"
-  spec.version       = Truthy::VERSION
+  spec.version       = Truther::VERSION
   spec.authors       = ["Stephane Bisson"]
   spec.email         = ["stephane.c.bisson@gmail.com"]
   spec.summary       = "Converts many strings to their boolean value."

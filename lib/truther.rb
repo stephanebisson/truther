@@ -1,12 +1,12 @@
-require "truthy/version"
+require "truther/version"
 
-module Truthy
-  TRUTHY_STRINGS = ['true', '1', 'yes', 'y', 'oui', 'vrai']
+module Truther
+  TRUTHER_STRINGS = ['true', '1', 'yes', 'y', 'oui', 'vrai']
   FALSY_STRINGS = ['false', '0', 'no', 'n', 'non', 'faux']
 
   class NeitherTrueNoFalseError < StandardError
 	  def initialize(str)
-	    super("'#{str}' is not recognized as truthy or falsy.")
+	    super("'#{str}' is not recognized as truther or falsy.")
 	  end
 	end
 end
@@ -14,11 +14,11 @@ end
 class String 
 	def to_b(when_not_recognized=:raise)
 		sanitized_string = self.downcase.strip
-		return true if Truthy::TRUTHY_STRINGS.include? sanitized_string
-		return false if Truthy::FALSY_STRINGS.include? sanitized_string
+		return true if Truther::TRUTHER_STRINGS.include? sanitized_string
+		return false if Truther::FALSY_STRINGS.include? sanitized_string
 		
 		if when_not_recognized == :raise
-			raise Truthy::NeitherTrueNoFalseError.new sanitized_string
+			raise Truther::NeitherTrueNoFalseError.new sanitized_string
 		else
 			when_not_recognized
 		end
