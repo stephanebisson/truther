@@ -6,7 +6,7 @@ module Truther
 
   class NeitherTrueNorFalseError < StandardError
 	  def initialize(str)
-	    super("'#{str}' is not recognized as truther or falsy.")
+	    super("'#{str}' is not recognized as truthy or falsy.")
 	  end
 	end
 end
